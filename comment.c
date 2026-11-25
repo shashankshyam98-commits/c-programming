@@ -24,7 +24,7 @@ void comment(char *output)
 
     while((ch = fgetc(fp)) != EOF)
     {
-        /* Inside string */
+        
 
         if(str)
         {
@@ -40,7 +40,7 @@ void comment(char *output)
                 str = 0;
         }
 
-        /* Inside character constant */
+       
 
         else if(chr)
         {
@@ -56,7 +56,7 @@ void comment(char *output)
                 chr = 0;
         }
 
-        /* Starting string */
+        
 
         else if(ch == '"')
         {
@@ -64,7 +64,7 @@ void comment(char *output)
             fputc(ch, qp);
         }
 
-        /* Starting character constant */
+       
 
         else if(ch == '\'')
         {
@@ -72,13 +72,13 @@ void comment(char *output)
             fputc(ch, qp);
         }
 
-        /* Comment checking */
+        
 
         else if(ch == '/')
         {
             next = fgetc(fp);
 
-            /* Single-line comment */
+           
 
             if(next == '/')
             {
@@ -88,7 +88,7 @@ void comment(char *output)
                     fputc('\n', qp);
             }
 
-            /* Multiline comment */
+            
 
             else if(next == '*')
             {
