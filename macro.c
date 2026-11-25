@@ -50,7 +50,7 @@ void macro()
 
             new->mname[i] = '\0';
 
-            /* Read function-like macro arguments */
+            
 
             if(*t == '(')
             {
