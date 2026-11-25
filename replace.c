@@ -79,7 +79,7 @@ void replace()
     {
         p = s;
 
-        /* Skip macro definition lines */
+        
 
         char *q = s;
 
@@ -118,7 +118,7 @@ void replace()
 
                 if(temp)
                 {
-                    /* Function-like macro */
+                    
 
                     if(temp->is_function)
                     {
@@ -152,7 +152,7 @@ void replace()
 
                                 values[j][i] = '\0';
 
-                                /* Remove leading spaces */
+                              
 
                                 int k = 0;
 
